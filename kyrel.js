@@ -19,7 +19,7 @@ var row, colors, kyrel, return_value, rando;
     'g' => green
 */
 
-var initial_state = [ '.', '.', '.', '.', '.' ];
+var initial_state = [ 'b', '.', '.', '.', '.' ];
 
 function main(n) {
 
@@ -29,8 +29,23 @@ function main(n) {
   ////                          ////
   //////////////////////////////////
 
-
-
+erase()
+moveRight()
+moveRight()
+moveRight()
+moveRight()
+useBlue()
+draw()
+onBlue()
+erase()
+moveLeft()
+moveLeft()
+moveLeft()
+moveLeft()
+useGreen()
+draw()
+onGreen()
+erase()
   //////////////////////////////////
   ////                          ////
   //// ^ YOUR CODE ABOVE HERE ^ ////
@@ -140,10 +155,13 @@ function useGreen() {
 }
 
 function onBlue() {
+  console.log(currentSquare().find(".dot.dot-blue").length > 0);
   return currentSquare().find(".dot.dot-blue").length > 0;
+
 }
 
 function onGreen() {
+  console.log("its green!")
   return currentSquare().find(".dot.dot-green").length > 0;
 }
 
